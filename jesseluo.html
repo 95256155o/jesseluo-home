@@ -1,0 +1,339 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4cc9f0;
+      --text-color: #2b2d42;
+      --light-color: #f8f9fa;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    
+    .profile {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .profile h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .profile p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+    
+    .projects {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .project-card h3 {
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-card p {
+      color: var(--text-color);
+      opacity: 0.7;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+    
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+      
+      .profile h1 {
+        font-size: 2rem;
+      }
+    }
+  
+
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesseluo's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3f37c9;
+      --accent-color: #4cc9f0;
+      --text-color: #2b2d42;
+      --light-color: #f8f9fa;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+    }
+    
+    .profile {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .profile h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .profile p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+    
+    .projects {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: var(--transition);
+      text-align: center;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .project-card h3 {
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-card p {
+      color: var(--text-color);
+      opacity: 0.7;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-color);
+      opacity: 0.7;
+    }
+    
+    @media (max-width: 768px) {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+      
+      .profile h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <h1>👋 Hi, I'm Jesseluo</h1>
+      <p>Welcome to my personal project navigation page</p>
+    </div>
+    
+    <div class="projects">
+      <div class="project-card">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Daily Work Report</h3>
+        <p>Track and manage your daily work progress</p>
+        <a href="https://dailyreport.jesseluo.com" class="btn">View Project</a>
+      </div>
+      
+      <div class="project-card">
+        <i class="fas fa-ring"></i>
+        <h3>Wedding Project</h3>
+        <p>Wedding planning and showcase platform</p>
+        <a href="https://wedding.jesseluo.com" class="btn">View Project</a>
+      </div>
+      
+      <div class="project-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Sunton Food</h3>
+        <p>Explore new food choices and videos</p>
+        <a href="https://sunton.jesseluo.com" class="btn">View Project</a>
+      </div>
+      
+      <div class="project-card">
+        <i class="fas fa-building"></i>
+        <h3>Oceanlink Enterprise</h3>
+        <p>Corporate website and business solutions</p>
+        <a href="https://oceanlink.jesseluo.com" class="btn">View Project</a>
+      </div>
+      
+      <div class="project-card">
+        <i class="fab fa-github"></i>
+        <h3>My GitHub</h3>
+        <p>Check out my open source projects and code</p>
+        <a href="https://github.com/YOUR-GITHUB" class="btn">View GitHub</a>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>&copy; 2023 Jesseluo. All rights reserved. All projects showcased are personal works.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
