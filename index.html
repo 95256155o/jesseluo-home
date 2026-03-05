@@ -3,481 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiaxi "Jesse" Luo | Business Development · Field Sales</title>
+    <title>Jesse Luo</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #3b82f6;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --text-gray: #64748b;
-            --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            --bg: #f9f9f8;
+            --text: #0f0f0f;
+            --muted: #444;
+            --border: #dededd;
+            --accent: #2563eb;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
+            font-size: 14.5px;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* --- Hero Section --- */
-        .hero {
-            text-align: center;
-            padding: 5rem 1rem 3rem;
-            background: linear-gradient(180deg, #fff 0%, var(--light) 100%);
-        }
-
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.2);
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .role-title {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .bio {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: var(--text-gray);
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-primary:hover { transform: translateY(-2px); background: #2563eb; }
-
-        .btn-secondary {
-            background: white;
-            color: var(--dark);
-            border: 1px solid #e2e8f0;
-        }
-
-        .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
-
-        /* --- Container --- */
-        .container {
-            max-width: 1100px;
+        .page {
+            max-width: 640px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 72px 24px 120px;
         }
 
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            padding-left: 1rem;
-            border-left: 4px solid var(--primary);
+        /* ── Header ── */
+        .header {
+            margin-bottom: 56px;
         }
 
-        /* --- Featured Card --- */
-        .featured-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 16px 40px -10px rgba(59, 130, 246, 0.18), 0 4px 16px rgba(0,0,0,0.08);
-            border: 1px solid #dbeafe;
-            border-left: 4px solid var(--primary);
-            margin-bottom: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .featured-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 22px 50px -10px rgba(59, 130, 246, 0.22), 0 6px 20px rgba(0,0,0,0.1);
-        }
-
-        @media (min-width: 768px) {
-            .featured-card {
-                flex-direction: row;
-            }
-        }
-
-        .featured-card-img-wrapper {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-
-        @media (min-width: 768px) {
-            .featured-card-img-wrapper {
-                width: 40%;
-                height: auto;
-                min-height: 320px;
-            }
-        }
-
-        .featured-card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .featured-card:hover .featured-card-img {
-            transform: scale(1.04);
-        }
-
-        .featured-card-content {
-            padding: 2rem 2rem 2rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex-grow: 1;
-        }
-
-        .featured-label {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 0.6rem;
-        }
-
-        .featured-card-content h3 {
-            font-size: 1.45rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
-        }
-
-        .featured-card-content p {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            margin-bottom: 1.25rem;
-            flex-grow: 1;
-        }
-
-        .featured-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .featured-cta {
-            background: var(--primary);
-            color: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.95rem;
-            transition: background 0.2s ease, transform 0.2s ease;
-            align-self: flex-start;
-        }
-
-        .featured-cta:hover {
-            background: #2563eb;
-            transform: translateY(-1px);
-        }
-
-        /* --- Projects Grid --- */
-        .grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: 1fr;
-        }
-
-        @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #f1f5f9;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.15);
-        }
-
-        .card-img-wrapper {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .card:hover .card-img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-        .card p { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 1.5rem; flex-grow: 1; }
-
-        .tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            background: #eff6ff;
-            color: #3b82f6;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .card-link {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .card-link:hover { text-decoration: underline; }
-
-        /* --- Other Projects Label --- */
-        .other-projects-label {
+        .name {
             font-size: 1rem;
             font-weight: 600;
-            color: #64748b;
-            padding-left: 0.75rem;
-            border-left: 3px solid #e2e8f0;
-            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
         }
 
-        .academic {
-            margin-top: 4rem;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            box-shadow: var(--card-shadow);
+        .tagline {
+            color: var(--muted);
+            font-size: 0.875rem;
+            margin-bottom: 14px;
         }
 
+        .nav-links {
+            display: flex;
+            gap: 14px;
+            font-size: 0.825rem;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.12s;
+        }
+
+        .nav-links a:hover { color: var(--text); }
+
+        /* ── Section ── */
+        section { margin-bottom: 48px; }
+
+        .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        /* ── Bio ── */
+        .bio {
+            font-size: 0.925rem;
+            color: #1a1a1a;
+            line-height: 1.8;
+            max-width: 540px;
+        }
+
+        /* ── Work list ── */
+        .project {
+            padding: 16px 0;
+            border-top: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .project:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-name {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .project-name a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .project-name a:hover { color: var(--accent); }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22c55e;
+            display: inline-block;
+            flex-shrink: 0;
+            margin-bottom: 1px;
+        }
+
+        .project-desc {
+            font-size: 0.825rem;
+            color: #3a3a3a;
+            line-height: 1.6;
+            max-width: 460px;
+        }
+
+        .project-year {
+            font-size: 0.775rem;
+            color: #666;
+            white-space: nowrap;
+            padding-top: 3px;
+        }
+
+        /* ── Footer ── */
         footer {
-            text-align: center;
-            padding: 4rem 1rem 2rem;
-            color: var(--text-gray);
-            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.775rem;
+            color: var(--muted);
         }
 
-        .social-icons a {
-            color: var(--dark);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
         }
-        .social-icons a:hover { color: var(--primary); }
 
+        footer a:hover { color: var(--text); }
+
+        @media (max-width: 480px) {
+            .page { padding: 48px 20px 80px; }
+            .project { grid-template-columns: 1fr; gap: 8px; }
+            .project-year { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div data-aos="fade-down">
-            <img src="http://www.benniniwedding.com/wp-content/uploads/2025/07/Jesse.png?q=80&w=1888&auto=format&fit=crop" alt="Jesse Luo" class="profile-img">
-        </div>
-        <h1 data-aos="fade-up" data-aos-delay="100">Jiaxi "Jesse" Luo</h1>
-        <div class="role-title" data-aos="fade-up" data-aos-delay="150">Business Development · Field Sales · 中英双语</div>
-        <p class="bio" data-aos="fade-up" data-aos-delay="200">
-            Bilingual BD professional (English/Mandarin) with a focus on the Chinese restaurant vertical. I build market intelligence before I build pipelines — because relationships close deals, not cold scripts.
-        </p>
+<div class="page">
 
-        <div class="btn-group" data-aos="fade-up" data-aos-delay="300">
-            <a href="mailto:jiaxijesseluo@gmail.com" class="btn btn-primary">
-                <i class="fa-solid fa-envelope"></i> Contact Me
-            </a>
+    <header class="header">
+        <div class="name">Jiaxi "Jesse" Luo</div>
+        <div class="tagline">Business Development · Field Sales · 中英双语</div>
+        <div class="nav-links">
+            <a href="mailto:jiaxijesseluo@gmail.com">jiaxijesseluo@gmail.com</a>
+            <a href="https://www.linkedin.com/in/jesseluooo/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/95256155o" target="_blank">GitHub</a>
         </div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title">Key Projects</h2>
+    <section>
+        <div class="label">About</div>
+        <p class="bio">
+            Bilingual BD professional (English&nbsp;/&nbsp;Mandarin) with a focus on the Chinese restaurant vertical.
+            I research a market before I pitch it — and I build the tools to do that research right.
+        </p>
+    </section>
 
-        <!-- Featured Card: Chowbus BD Intelligence -->
-        <div class="featured-card" data-aos="fade-up">
-            <div class="featured-card-img-wrapper">
-                <img
-                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop"
-                    alt="Chinese restaurant interior"
-                    class="featured-card-img"
-                >
-            </div>
-            <div class="featured-card-content">
-                <div class="featured-label">Featured · Field Sales Intelligence</div>
-                <h3>Chowbus BD Intelligence — Ann Arbor, MI</h3>
-                <p>A field-ready BD intelligence tool built for the Chinese restaurant vertical. Maps 10 target accounts across Ann Arbor with lead temperature scoring, decision-maker profiles, Chowbus-specific pitch angles, and a 90-day market entry playbook. Built to actually use on the job — not just to demo.</p>
-                <div class="featured-tags">
-                    <span class="tag">Field Sales</span>
-                    <span class="tag">Chinese Restaurant Vertical</span>
-                    <span class="tag">Chowbus</span>
-                    <span class="tag">BD Intelligence</span>
-                    <span class="tag">Mandarin</span>
+    <section>
+        <div class="label">Work</div>
+
+        <div class="project">
+            <div>
+                <div class="project-name">
+                    <a href="https://95256155o.github.io/chowbus-bd-ann-arbor/" target="_blank">Chowbus BD Intelligence — Ann Arbor, MI</a>
+                    <span class="live-dot" title="Live"></span>
                 </div>
-                <a href="https://95256155o.github.io/chowbus-bd-ann-arbor/" target="_blank" class="featured-cta">
-                    View Live Tool <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <div class="project-desc">
+                    Field sales intelligence tool for the Chinese restaurant vertical.
+                    10 target accounts with lead temperature scoring, POS contract windows,
+                    decision-maker profiles, and a 90-day market entry plan.
+                    Built to use on the job.
+                </div>
             </div>
+            <div class="project-year">2026</div>
         </div>
 
-        <!-- Other Projects section -->
-        <div class="other-projects-label" data-aos="fade-up">Other Projects</div>
-
-        <div class="grid">
-
-            <!-- Card 1: Body Shop Optimization -->
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512080482556-ea648017576c?q=80&w=1000&auto=format&fit=crop" alt="Auto Body Shop" class="card-img">
+        <div class="project">
+            <div>
+                <div class="project-name">
+                    <a href="https://github.com/95256155o/Overwatch-SQL-Analytics/tree/main" target="_blank">SQL Analytics</a>
                 </div>
-                <div class="card-content">
-                    <h3>Body Shop Optimization</h3>
-                    <p>Designed 100+ pages of SOPs and integrated workflows with Mwork &amp; CCC One.</p>
-                    <div class="tags">
-                        <span class="tag">CCC One</span>
-                        <span class="tag">Workflow Analysis</span>
-                    </div>
-                    <a href="https://dailyreport.jesseluo.com" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="project-desc">
+                    Performance engine and data architecture work. Open source.
                 </div>
             </div>
-
-            <!-- Card 2: Oceanlink Enterprise -->
-            <div class="card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Oceanlink" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h3>Oceanlink Enterprise</h3>
-                    <p>Corporate solution tailored to business goals, applying HCI principles.</p>
-                    <div class="tags">
-                        <span class="tag">HCI Research</span>
-                        <span class="tag">Business Strategy</span>
-                    </div>
-                    <a href="https://oceanlinkenterprise.com/" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- Card 3: Bennini Wedding -->
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1000&auto=format&fit=crop" alt="Wedding Platform" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h3>Bennini Wedding</h3>
-                    <p>A comprehensive showcase platform focusing on visual storytelling.</p>
-                    <div class="tags">
-                        <span class="tag">Web Design</span>
-                        <span class="tag">UX Focus</span>
-                    </div>
-                    <a href="https://www.benniniwedding.com/" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- Card 4: Data & Architecture -->
-            <div class="card" data-aos="fade-up" data-aos-delay="400">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop" alt="GitHub" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h3>Data &amp; Architecture</h3>
-                    <p>SQL Performance Engines and Open Source repositories.</p>
-                    <div class="tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">GitHub</span>
-                    </div>
-                    <a href="https://github.com/95256155o/Overwatch-SQL-Analytics/tree/main" target="_blank" class="card-link">View Code <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
+            <div class="project-year">2026</div>
         </div>
 
-    </div>
+        <div class="project">
+            <div>
+                <div class="project-name">
+                    <a href="https://dailyreport.jesseluo.com" target="_blank">Body Shop Operations</a>
+                </div>
+                <div class="project-desc">
+                    100+ pages of SOPs and integrated workflows across Mwork &amp; CCC One
+                    for a high-volume auto body operation.
+                </div>
+            </div>
+            <div class="project-year">2025</div>
+        </div>
+
+        <div class="project">
+            <div>
+                <div class="project-name">
+                    <a href="https://oceanlinkenterprise.com/" target="_blank">Oceanlink Enterprise</a>
+                </div>
+                <div class="project-desc">
+                    Corporate solution applying HCI principles to business strategy
+                    and client-facing systems.
+                </div>
+            </div>
+            <div class="project-year">2025</div>
+        </div>
+
+        <div class="project">
+            <div>
+                <div class="project-name">
+                    <a href="https://www.benniniwedding.com/" target="_blank">Bennini Wedding</a>
+                </div>
+                <div class="project-desc">
+                    Visual storytelling platform for wedding services.
+                </div>
+            </div>
+            <div class="project-year">2025</div>
+        </div>
+
+    </section>
 
     <footer>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/jesseluooo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/95256155o" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:jiaxijesseluo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <p>&copy; 2026 Jesse Luo. All rights reserved.</p>
+        <span>&copy; 2026 Jesse Luo</span>
+        <a href="mailto:jiaxijesseluo@gmail.com">Get in touch</a>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true, offset: 50 });
-    </script>
+</div>
+
 </body>
 </html>
