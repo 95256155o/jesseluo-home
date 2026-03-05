@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiaxi "Jesse" Luo | Business Systems Analyst</title>
-    
+    <title>Jiaxi "Jesse" Luo | Business Development · Field Sales</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
     <style>
         :root {
-            --primary: #2563eb;
+            --primary: #3b82f6;
             --dark: #0f172a;
             --light: #f8fafc;
             --text-gray: #64748b;
@@ -21,7 +21,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--light);
@@ -43,7 +43,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--primary);
-            box-shadow: 0 8px 15px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 8px 15px rgba(59, 130, 246, 0.2);
             margin-bottom: 1rem;
         }
 
@@ -88,10 +88,10 @@
         .btn-primary {
             background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
-        .btn-primary:hover { transform: translateY(-2px); background: #1d4ed8; }
+        .btn-primary:hover { transform: translateY(-2px); background: #2563eb; }
 
         .btn-secondary {
             background: white;
@@ -101,9 +101,9 @@
 
         .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
 
-        /* --- Projects Grid (核心修改部分) --- */
+        /* --- Container --- */
         .container {
-            max-width: 1000px; /* 稍微调窄一点，让双列布局看起来更精致 */
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -116,20 +116,122 @@
             border-left: 4px solid var(--primary);
         }
 
+        /* --- Featured Card --- */
+        .featured-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px -10px rgba(59, 130, 246, 0.18), 0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid #dbeafe;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 50px -10px rgba(59, 130, 246, 0.22), 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .featured-card {
+                flex-direction: row;
+            }
+        }
+
+        .featured-card-img-wrapper {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .featured-card-img-wrapper {
+                width: 40%;
+                height: auto;
+                min-height: 320px;
+            }
+        }
+
+        .featured-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .featured-card:hover .featured-card-img {
+            transform: scale(1.04);
+        }
+
+        .featured-card-content {
+            padding: 2rem 2rem 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .featured-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+        }
+
+        .featured-card-content h3 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .featured-card-content p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .featured-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .featured-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+            align-self: flex-start;
+        }
+
+        .featured-cta:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        /* --- Projects Grid --- */
         .grid {
             display: grid;
             gap: 2rem;
-            /* 
-               默认移动端：1列
-               这里的逻辑是：从小屏幕开始设计
-            */
             grid-template-columns: 1fr;
         }
 
-        /* 平板和电脑端：强制显示2列 
-           这样 4 个项目就会变成整齐的 2x2 方块，
-           彻底解决 "3个一行、剩1个挂下面" 的门牙问题。
-        */
         @media (min-width: 768px) {
             .grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -145,7 +247,7 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #f1f5f9;
-            height: 100%; /* 保证卡片高度一致 */
+            height: 100%;
         }
 
         .card:hover {
@@ -154,7 +256,7 @@
         }
 
         .card-img-wrapper {
-            height: 200px; /* 稍微加高图片区域，视觉更饱满 */
+            height: 200px;
             overflow: hidden;
         }
 
@@ -190,7 +292,7 @@
             font-size: 0.75rem;
             padding: 4px 10px;
             background: #eff6ff;
-            color: var(--primary);
+            color: #3b82f6;
             border-radius: 4px;
             font-weight: 600;
         }
@@ -203,8 +305,18 @@
             align-items: center;
             gap: 5px;
         }
-        
+
         .card-link:hover { text-decoration: underline; }
+
+        /* --- Other Projects Label --- */
+        .other-projects-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #64748b;
+            padding-left: 0.75rem;
+            border-left: 3px solid #e2e8f0;
+            margin-bottom: 1.5rem;
+        }
 
         .academic {
             margin-top: 4rem;
@@ -221,7 +333,7 @@
             color: var(--text-gray);
             font-size: 0.9rem;
         }
-        
+
         .social-icons a {
             color: var(--dark);
             font-size: 1.5rem;
@@ -239,17 +351,13 @@
             <img src="http://www.benniniwedding.com/wp-content/uploads/2025/07/Jesse.png?q=80&w=1888&auto=format&fit=crop" alt="Jesse Luo" class="profile-img">
         </div>
         <h1 data-aos="fade-up" data-aos-delay="100">Jiaxi "Jesse" Luo</h1>
-        <div class="role-title" data-aos="fade-up" data-aos-delay="150">Business Systems Analyst</div>
+        <div class="role-title" data-aos="fade-up" data-aos-delay="150">Business Development · Field Sales · 中英双语</div>
         <p class="bio" data-aos="fade-up" data-aos-delay="200">
-            Bridging operational workflows with data-driven insights. Passionate about applying academic rigor to real-world business challenges.
+            Bilingual BD professional (English/Mandarin) with a focus on the Chinese restaurant vertical. I build market intelligence before I build pipelines — because relationships close deals, not cold scripts.
         </p>
 
         <div class="btn-group" data-aos="fade-up" data-aos-delay="300">
-            <!-- 这里的 href="./resume.pdf" 意思是文件就在 index.html 旁边 -->
-            <a href="./jiaxi_resume.pdf" class="btn btn-primary" target="_blank">
-                <i class="fa-solid fa-file-arrow-down"></i> Resume
-            </a>
-            <a href="mailto:jiaxijesseluo@gmail.com" class="btn btn-secondary">
+            <a href="mailto:jiaxijesseluo@gmail.com" class="btn btn-primary">
                 <i class="fa-solid fa-envelope"></i> Contact Me
             </a>
         </div>
@@ -257,18 +365,46 @@
 
     <div class="container">
         <h2 class="section-title">Key Projects</h2>
-        
-        <!-- 这里是关键：Grid 布局 -->
+
+        <!-- Featured Card: Chowbus BD Intelligence -->
+        <div class="featured-card" data-aos="fade-up">
+            <div class="featured-card-img-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop"
+                    alt="Chinese restaurant interior"
+                    class="featured-card-img"
+                >
+            </div>
+            <div class="featured-card-content">
+                <div class="featured-label">Featured · Field Sales Intelligence</div>
+                <h3>Chowbus BD Intelligence — Ann Arbor, MI</h3>
+                <p>A field-ready BD intelligence tool built for the Chinese restaurant vertical. Maps 10 target accounts across Ann Arbor with lead temperature scoring, decision-maker profiles, Chowbus-specific pitch angles, and a 90-day market entry playbook. Built to actually use on the job — not just to demo.</p>
+                <div class="featured-tags">
+                    <span class="tag">Field Sales</span>
+                    <span class="tag">Chinese Restaurant Vertical</span>
+                    <span class="tag">Chowbus</span>
+                    <span class="tag">BD Intelligence</span>
+                    <span class="tag">Mandarin</span>
+                </div>
+                <a href="https://95256155o.github.io/chowbus-bd-ann-arbor/" target="_blank" class="featured-cta">
+                    View Live Tool <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Other Projects section -->
+        <div class="other-projects-label" data-aos="fade-up">Other Projects</div>
+
         <div class="grid">
-            
-            <!-- 卡片 1 -->
+
+            <!-- Card 1: Body Shop Optimization -->
             <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-img-wrapper">
                     <img src="https://images.unsplash.com/photo-1512080482556-ea648017576c?q=80&w=1000&auto=format&fit=crop" alt="Auto Body Shop" class="card-img">
                 </div>
                 <div class="card-content">
                     <h3>Body Shop Optimization</h3>
-                    <p>Designed 100+ pages of SOPs and integrated workflows with Mwork & CCC One.</p>
+                    <p>Designed 100+ pages of SOPs and integrated workflows with Mwork &amp; CCC One.</p>
                     <div class="tags">
                         <span class="tag">CCC One</span>
                         <span class="tag">Workflow Analysis</span>
@@ -277,24 +413,8 @@
                 </div>
             </div>
 
-            <!-- 卡片 2 -->
+            <!-- Card 2: Oceanlink Enterprise -->
             <div class="card" data-aos="fade-up" data-aos-delay="200">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1000&auto=format&fit=crop" alt="Wedding Platform" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h3>Bennini Wedding</h3>
-                    <p>A comprehensive showcase platform focusing on visual storytelling.</p>
-                    <div class="tags">
-                        <span class="tag">Web Design</span>
-                        <span class="tag">UX Focus</span>
-                    </div>
-                    <a href="https://www.benniniwedding.com/" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <!-- 卡片 3 -->
-            <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-img-wrapper">
                     <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Oceanlink" class="card-img">
                 </div>
@@ -309,13 +429,29 @@
                 </div>
             </div>
 
-            <!-- 卡片 4 -->
+            <!-- Card 3: Bennini Wedding -->
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1000&auto=format&fit=crop" alt="Wedding Platform" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3>Bennini Wedding</h3>
+                    <p>A comprehensive showcase platform focusing on visual storytelling.</p>
+                    <div class="tags">
+                        <span class="tag">Web Design</span>
+                        <span class="tag">UX Focus</span>
+                    </div>
+                    <a href="https://www.benniniwedding.com/" target="_blank" class="card-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4: Data & Architecture -->
             <div class="card" data-aos="fade-up" data-aos-delay="400">
                 <div class="card-img-wrapper">
                     <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop" alt="GitHub" class="card-img">
                 </div>
                 <div class="card-content">
-                    <h3>Data & Architecture</h3>
+                    <h3>Data &amp; Architecture</h3>
                     <p>SQL Performance Engines and Open Source repositories.</p>
                     <div class="tags">
                         <span class="tag">SQL</span>
@@ -328,22 +464,15 @@
 
         </div>
 
-        <div class="academic" data-aos="fade-up">
-            <h3><i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i> Academic Pursuit</h3>
-            <p style="margin-top: 0.5rem; margin-bottom: 0;">
-                Interested in doctoral-level research regarding data architecture and its impact on business strategy.
-            </p>
-        </div>
-
     </div>
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/jesseluooo/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/95256155o" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="mailto:jiaxijesseluo@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p>&copy; 2025 Jesse Luo. All rights reserved.</p>
+        <p>&copy; 2026 Jesse Luo. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
